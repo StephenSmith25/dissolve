@@ -7,6 +7,10 @@ add_library(ff
   spcfw.cpp
   spcfw.h
 
+  # Skeletal Example
+  skeleton.cpp
+  skeleton.h
+
   # UFF
   uff.cpp
   uffatomtype.cpp
