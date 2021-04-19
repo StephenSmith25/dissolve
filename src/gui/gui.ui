@@ -1,0 +1,1714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DissolveWindow</class>
+ <widget class="QMainWindow" name="DissolveWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dissolve-GUI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="main.qrc">
+    <normaloff>:/dissolve/icons/dissolve.png</normaloff>:/dissolve/icons/dissolve.png</iconset>
+  </property>
+  <widget class="QWidget" name="Centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="SuperStackedWidget" name="MainStack">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="StartPage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <property name="leftMargin">
+         <number>4</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>4</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Create</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QToolButton" name="StartCreateNewButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>10000</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Empty Simulation</string>
+              </property>
+              <property name="icon">
+               <iconset resource="main.qrc">
+                <normaloff>:/start/icons/start_new.svg</normaloff>:/start/icons/start_new.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>64</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="StartCreateFromTemplateButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>10000</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>From Template</string>
+              </property>
+              <property name="icon">
+               <iconset resource="main.qrc">
+                <normaloff>:/start/icons/start_template.svg</normaloff>:/start/icons/start_template.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>64</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>372</width>
+                <height>93</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Open / Connect</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QToolButton" name="StartOpenRecentButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>10000</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Recent Simulations</string>
+              </property>
+              <property name="icon">
+               <iconset resource="main.qrc">
+                <normaloff>:/start/icons/start_openrecent.svg</normaloff>:/start/icons/start_openrecent.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>64</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="StartOpenLocalButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>10000</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Local Simulation</string>
+              </property>
+              <property name="icon">
+               <iconset resource="main.qrc">
+                <normaloff>:/start/icons/start_openlocal.svg</normaloff>:/start/icons/start_openlocal.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>64</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="StartConnectButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>10000</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Monitor Remote</string>
+              </property>
+              <property name="icon">
+               <iconset resource="main.qrc">
+                <normaloff>:/start/icons/start_connect.svg</normaloff>:/start/icons/start_connect.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>64</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>372</width>
+                <height>93</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Help</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QToolButton" name="StartOnlineManualButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>10000</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Online Manual</string>
+              </property>
+              <property name="icon">
+               <iconset resource="main.qrc">
+                <normaloff>:/start/icons/start_manual.svg</normaloff>:/start/icons/start_manual.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>64</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="StartOnlineTutorialsButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>10000</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Online Tutorials</string>
+              </property>
+              <property name="icon">
+               <iconset resource="main.qrc">
+                <normaloff>:/start/icons/start_tutorials.svg</normaloff>:/start/icons/start_tutorials.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>64</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>372</width>
+                <height>93</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>474</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SimulationPage">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>4</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>4</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QWidget" name="MainWidget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>15</verstretch>
+            </sizepolicy>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>4</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="DissolveLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="main.qrc">:/dissolve/icons/dissolve.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="ControlIterationLabel">
+                <property name="font">
+                 <font>
+                  <pointsize>9</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>000000</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="ControlRunButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string>Run the current simulation</string>
+                </property>
+                <property name="text">
+                 <string>Run</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main.qrc">
+                  <normaloff>:/control/icons/control_play.svg</normaloff>:/control/icons/control_play.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="ControlStepButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string>Step the current simulation (perform one iteration)</string>
+                </property>
+                <property name="text">
+                 <string>Step</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main.qrc">
+                  <normaloff>:/control/icons/control_step.svg</normaloff>:/control/icons/control_step.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="ControlPauseButton">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Stop (pause) the current simulation</string>
+                </property>
+                <property name="text">
+                 <string>Pause</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main.qrc">
+                  <normaloff>:/control/icons/control_pause.svg</normaloff>:/control/icons/control_pause.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="ControlReloadButton">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>Reload</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main.qrc">
+                  <normaloff>:/general/icons/general_repeat.svg</normaloff>:/general/icons/general_repeat.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="MainTabsWidget" name="MainTabs">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>10</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="currentIndex">
+               <number>-1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="MessagesWidget" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>4</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QToolButton" name="MessagesIncreaseFontSizeButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="icon">
+                 <iconset resource="main.qrc">
+                  <normaloff>:/general/icons/general_arrowup.svg</normaloff>:/general/icons/general_arrowup.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>16</width>
+                  <height>16</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="MessagesFontLabel">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="main.qrc">:/general/icons/general_font.svg</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="MessagesDecreaseFontSizeButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="icon">
+                 <iconset resource="main.qrc">
+                  <normaloff>:/general/icons/general_arrowdown.svg</normaloff>:/general/icons/general_arrowdown.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>16</width>
+                  <height>16</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="MessagesEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="undoRedoEnabled">
+               <bool>false</bool>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="acceptRichText">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="MainMenu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="SessionMenu">
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="FileNewAction"/>
+    <addaction name="FileNewFromTemplateAction"/>
+    <addaction name="separator"/>
+    <addaction name="FileOpenLocalAction"/>
+    <addaction name="FileConnectAction"/>
+    <addaction name="FileOpenRecentAction"/>
+    <addaction name="separator"/>
+    <addaction name="FileCloseAction"/>
+    <addaction name="separator"/>
+    <addaction name="FileSaveAction"/>
+    <addaction name="FileSaveAsAction"/>
+    <addaction name="separator"/>
+    <addaction name="FileQuitAction"/>
+   </widget>
+   <widget class="QMenu" name="WorkspaceMenu">
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>&amp;Workspace</string>
+    </property>
+    <addaction name="WorkspaceCreateEmptyAction"/>
+    <addaction name="WorkspaceRenameCurrentGizmoAction"/>
+   </widget>
+   <widget class="QMenu" name="SimulationMenu">
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>S&amp;imulation</string>
+    </property>
+    <addaction name="SimulationRunAction"/>
+    <addaction name="SimulationRunForAction"/>
+    <addaction name="separator"/>
+    <addaction name="SimulationPauseAction"/>
+    <addaction name="SimulationStepFiveAction"/>
+    <addaction name="SimulationStepAction"/>
+    <addaction name="separator"/>
+    <addaction name="SimulationSaveRestartPointAction"/>
+    <addaction name="SimulationDataManagerAction"/>
+    <addaction name="SimulationClearModuleDataAction"/>
+    <addaction name="separator"/>
+    <addaction name="SimulationSetRandomSeedAction"/>
+   </widget>
+   <widget class="QMenu" name="HelpMenu">
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="HelpOnlineManualAction"/>
+    <addaction name="HelpOnlineTutorialsAction"/>
+   </widget>
+   <widget class="QMenu" name="SpeciesMenu">
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>&amp;Species</string>
+    </property>
+    <widget class="QMenu" name="SpeciesCreateMenu">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>&amp;Create...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="main.qrc">
+       <normaloff>:/tabs/icons/tabs_species.svg</normaloff>:/tabs/icons/tabs_species.svg</iconset>
+     </property>
+     <addaction name="SpeciesCreateAtomicAction"/>
+     <addaction name="SpeciesCreateDrawAction"/>
+    </widget>
+    <widget class="QMenu" name="SpeciesImportMenu">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>&amp;Import...</string>
+     </property>
+     <addaction name="SpeciesImportFromDissolveAction"/>
+     <addaction name="SpeciesImportFromXYZAction"/>
+    </widget>
+    <addaction name="SpeciesCreateMenu"/>
+    <addaction name="SpeciesImportMenu"/>
+    <addaction name="SpeciesRenameAction"/>
+    <addaction name="SpeciesDeleteAction"/>
+    <addaction name="separator"/>
+    <addaction name="SpeciesAddForcefieldTermsAction"/>
+   </widget>
+   <widget class="QMenu" name="ConfigurationMenu">
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>&amp;Configuration</string>
+    </property>
+    <widget class="QMenu" name="ConfigurationCreateMenu">
+     <property name="geometry">
+      <rect>
+       <x>642</x>
+       <y>140</y>
+       <width>184</width>
+       <height>158</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>&amp;Create...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="main.qrc">
+       <normaloff>:/tabs/icons/tabs_configuration.svg</normaloff>:/tabs/icons/tabs_configuration.svg</iconset>
+     </property>
+     <addaction name="ConfigurationCreateEmptyAction"/>
+     <addaction name="separator"/>
+     <addaction name="ConfigurationCreateSimpleRandomMixAction"/>
+     <addaction name="ConfigurationCreateRelativeRandomMixAction"/>
+    </widget>
+    <widget class="QMenu" name="ConfigurationExportToMenu">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>&amp;Export to...</string>
+     </property>
+     <addaction name="ConfigurationExportToXYZAction"/>
+    </widget>
+    <addaction name="ConfigurationCreateMenu"/>
+    <addaction name="ConfigurationRenameAction"/>
+    <addaction name="ConfigurationDeleteAction"/>
+    <addaction name="separator"/>
+    <addaction name="ConfigurationExportToMenu"/>
+   </widget>
+   <widget class="QMenu" name="LayerMenu">
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>&amp;Layer</string>
+    </property>
+    <widget class="QMenu" name="LayerCreateMenu">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>&amp;Create...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="main.qrc">
+       <normaloff>:/tabs/icons/tabs_modulelayer.svg</normaloff>:/tabs/icons/tabs_modulelayer.svg</iconset>
+     </property>
+     <widget class="QMenu" name="LayerCreateEvolutionMenu">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>E&amp;volution...</string>
+      </property>
+      <addaction name="LayerCreateEvolveBasicAtomicAction"/>
+      <addaction name="LayerCreateEvolveAtomicAction"/>
+      <addaction name="LayerCreateEvolveMolecularAction"/>
+      <addaction name="LayerCreateEvolveEPSRAction"/>
+     </widget>
+     <widget class="QMenu" name="LayerCreateRefinementMenu">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>&amp;Refinement...</string>
+      </property>
+      <addaction name="LayerCreateRefineEPSRAction"/>
+     </widget>
+     <widget class="QMenu" name="LayerCreateCalculateMenu">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>&amp;Calculate...</string>
+      </property>
+      <addaction name="LayerCreateCalculateRDFAction"/>
+      <addaction name="LayerCreateCalculateRDFStructureFactorAction"/>
+      <addaction name="LayerCreateCalculateRDFNeutronAction"/>
+      <addaction name="LayerCreateCalculateRDFNeutronXRayAction"/>
+     </widget>
+     <widget class="QMenu" name="LayerCreateAnalyseMenu">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Analysis...</string>
+      </property>
+      <addaction name="LayerCreateAnalyseRDFCNAction"/>
+      <addaction name="LayerCreateAnalyseAvgMolSDFAction"/>
+     </widget>
+     <addaction name="LayerCreateEmptyAction"/>
+     <addaction name="separator"/>
+     <addaction name="LayerCreateEvolutionMenu"/>
+     <addaction name="LayerCreateCalculateMenu"/>
+     <addaction name="LayerCreateRefinementMenu"/>
+     <addaction name="LayerCreateAnalyseMenu"/>
+    </widget>
+    <addaction name="LayerCreateMenu"/>
+    <addaction name="LayerRenameAction"/>
+    <addaction name="LayerDeleteAction"/>
+   </widget>
+   <addaction name="SessionMenu"/>
+   <addaction name="SimulationMenu"/>
+   <addaction name="SpeciesMenu"/>
+   <addaction name="ConfigurationMenu"/>
+   <addaction name="LayerMenu"/>
+   <addaction name="WorkspaceMenu"/>
+   <addaction name="HelpMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="FileOpenLocalAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/menu/icons/menu_open.svg</normaloff>:/menu/icons/menu_open.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open Local...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="FileSaveAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/menu/icons/menu_save.svg</normaloff>:/menu/icons/menu_save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="FileQuitAction">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="WorkspaceCreateEmptyAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/tabs/icons/tabs_workspace.svg</normaloff>:/tabs/icons/tabs_workspace.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Create New</string>
+   </property>
+  </action>
+  <action name="WorkspaceCurrentAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Current Workspace</string>
+   </property>
+   <property name="font">
+    <font>
+     <italic>true</italic>
+    </font>
+   </property>
+  </action>
+  <action name="WorkspaceAddWidgetGeneralAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>General</string>
+   </property>
+   <property name="font">
+    <font>
+     <italic>true</italic>
+    </font>
+   </property>
+  </action>
+  <action name="WorkspaceAddWidgetPairPotential">
+   <property name="text">
+    <string>Pair Potential</string>
+   </property>
+  </action>
+  <action name="FileSaveAsAction">
+   <property name="text">
+    <string>Save &amp;As...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="FileConnectAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/menu/icons/menu_connect.svg</normaloff>:/menu/icons/menu_connect.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Connect...</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect to a remote simulation</string>
+   </property>
+  </action>
+  <action name="FileOpenRecentAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/menu/icons/menu_recent.svg</normaloff>:/menu/icons/menu_recent.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Open R&amp;ecent...</string>
+   </property>
+  </action>
+  <action name="SimulationRunAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/control/icons/control_play.svg</normaloff>:/control/icons/control_play.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Run</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="SimulationStepAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/control/icons/control_step.svg</normaloff>:/control/icons/control_step.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Step</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="SimulationStepFiveAction">
+   <property name="text">
+    <string>Step &amp;Five</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
+  </action>
+  <action name="SimulationPauseAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/control/icons/control_pause.svg</normaloff>:/control/icons/control_pause.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Pause</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="FileNewAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/menu/icons/menu_new.svg</normaloff>:/menu/icons/menu_new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+  </action>
+  <action name="FileCloseAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/general/icons/general_cross.svg</normaloff>:/general/icons/general_cross.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+  </action>
+  <action name="HelpOnlineManualAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/start/icons/start_manual.svg</normaloff>:/start/icons/start_manual.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Online Manual</string>
+   </property>
+   <property name="toolTip">
+    <string>Go to Dissolve's online manual</string>
+   </property>
+  </action>
+  <action name="HelpOnlineTutorialsAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/start/icons/start_tutorials.svg</normaloff>:/start/icons/start_tutorials.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Online Tutorials</string>
+   </property>
+   <property name="toolTip">
+    <string>Go to the online tutorials resource</string>
+   </property>
+  </action>
+  <action name="SimulationSetRandomSeedAction">
+   <property name="text">
+    <string>Set &amp;Random Seed</string>
+   </property>
+  </action>
+  <action name="LayerAddAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/tabs/icons/tabs_modulelayer.svg</normaloff>:/tabs/icons/tabs_modulelayer.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Add &amp;Processing Layer...</string>
+   </property>
+  </action>
+  <action name="SpeciesAddForcefieldTermsAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/tabs/icons/tabs_ff.svg</normaloff>:/tabs/icons/tabs_ff.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Add &amp;Forcefield Terms...</string>
+   </property>
+  </action>
+  <action name="FileNewFromTemplateAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/start/icons/start_template.svg</normaloff>:/start/icons/start_template.svg</iconset>
+   </property>
+   <property name="text">
+    <string>New from &amp;Template...</string>
+   </property>
+   <property name="toolTip">
+    <string>Start a new simulation from a system template</string>
+   </property>
+  </action>
+  <action name="ConfigurationRenameAction">
+   <property name="text">
+    <string>&amp;Rename...</string>
+   </property>
+  </action>
+  <action name="SpeciesRenameAction">
+   <property name="text">
+    <string>&amp;Rename...</string>
+   </property>
+  </action>
+  <action name="SpeciesCreateEmptyAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/menu/icons/menu_new.svg</normaloff>:/menu/icons/menu_new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Empty</string>
+   </property>
+  </action>
+  <action name="SpeciesCreateAtomicAction">
+   <property name="text">
+    <string>&amp;Atomic...</string>
+   </property>
+  </action>
+  <action name="ConfigurationCreateEmptyAction">
+   <property name="text">
+    <string>&amp;Empty</string>
+   </property>
+  </action>
+  <action name="ConfigurationCreateSimpleRandomMixAction">
+   <property name="text">
+    <string>&amp;Simple random mix</string>
+   </property>
+  </action>
+  <action name="ConfigurationCreateRelativeRandomMixAction">
+   <property name="text">
+    <string>&amp;Relative random mix</string>
+   </property>
+  </action>
+  <action name="LayerCreateEmptyAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/menu/icons/menu_new.svg</normaloff>:/menu/icons/menu_new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Empty</string>
+   </property>
+  </action>
+  <action name="LayerRenameAction">
+   <property name="text">
+    <string>&amp;Rename...</string>
+   </property>
+  </action>
+  <action name="LayerCreateEvolveEPSRAction">
+   <property name="text">
+    <string>&amp;EPSR (MC Only)</string>
+   </property>
+  </action>
+  <action name="LayerCreateEvolveMolecularAction">
+   <property name="text">
+    <string>Standard &amp;Molecular (MC/MD)</string>
+   </property>
+  </action>
+  <action name="LayerCreateRefineEPSRAction">
+   <property name="text">
+    <string>Standard &amp;EPSR</string>
+   </property>
+  </action>
+  <action name="LayerDeleteAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/general/icons/general_trash.svg</normaloff>:/general/icons/general_trash.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+  </action>
+  <action name="LayerCreateEvolveAtomicAction">
+   <property name="text">
+    <string>Standard &amp;Atomic (MC/MD)</string>
+   </property>
+  </action>
+  <action name="ConfigurationDeleteAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/general/icons/general_trash.svg</normaloff>:/general/icons/general_trash.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+  </action>
+  <action name="SpeciesDeleteAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/general/icons/general_trash.svg</normaloff>:/general/icons/general_trash.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+  </action>
+  <action name="LayerCreateCalculateRDFNeutronAction">
+   <property name="text">
+    <string>RDF and &amp;Neutron S(Q)</string>
+   </property>
+  </action>
+  <action name="LayerCreateCalculateRDFNeutronXRayAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>RDF, Neutron S(Q), and &amp;X-ray S(Q)</string>
+   </property>
+  </action>
+  <action name="LayerCreateCalculateRDFStructureFactorAction">
+   <property name="text">
+    <string>RDF and &amp;Unweighted S(Q)</string>
+   </property>
+  </action>
+  <action name="LayerCreateCalculateRDFAction">
+   <property name="text">
+    <string>&amp;RDF Only</string>
+   </property>
+  </action>
+  <action name="ConfigurationExportToXYZAction">
+   <property name="text">
+    <string>XYZ Coordinates</string>
+   </property>
+  </action>
+  <action name="SpeciesImportFromDissolveAction">
+   <property name="text">
+    <string>From Existing &amp;Simulation...</string>
+   </property>
+  </action>
+  <action name="SpeciesImportFromXYZAction">
+   <property name="text">
+    <string>From &amp;XYZ...</string>
+   </property>
+  </action>
+  <action name="SimulationDataManagerAction">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/viewer/icons/viewer_data.svg</normaloff>:/viewer/icons/viewer_data.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Data Manager...</string>
+   </property>
+  </action>
+  <action name="SimulationSaveRestartPointAction">
+   <property name="text">
+    <string>Save Restart &amp;Point...</string>
+   </property>
+  </action>
+  <action name="SimulationClearModuleDataAction">
+   <property name="text">
+    <string>Clear Module Data</string>
+   </property>
+  </action>
+  <action name="SimulationRunForAction">
+   <property name="text">
+    <string>Run &amp;For...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="LayerCreateAnalyseRDFCNAction">
+   <property name="text">
+    <string>RDF &amp;&amp; Coordination Number</string>
+   </property>
+  </action>
+  <action name="LayerCreateAnalyseAvgMolSDFAction">
+   <property name="text">
+    <string>Average Molecule &amp;&amp; SDF</string>
+   </property>
+  </action>
+  <action name="SpeciesCreateDrawAction">
+   <property name="text">
+    <string>Draw...</string>
+   </property>
+  </action>
+  <action name="WorkspaceRenameCurrentGizmoAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Rename Current Gizmo</string>
+   </property>
+  </action>
+  <action name="LayerCreateEvolveBasicAtomicAction">
+   <property name="text">
+    <string>Atomic (MC only)</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainTabsWidget</class>
+   <extends>QTabWidget</extends>
+   <header>gui/maintabswidget.hui</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SuperStackedWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>gui/widgets/superstackedwidget.hui</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="main.qrc"/>
+ </resources>
+ <connections/>
+</ui>

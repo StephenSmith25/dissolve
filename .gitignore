@@ -1,0 +1,40 @@
+# Makefile stuff
+*.in
+/config/
+configure
+aclocal.m4
+/autom4te.cache/
+Makefile
+.deps/
+config.h
+config.log
+config.status
+libtool
+stamp-h1
+
+# Build objects
+*.a
+*.o
+*.la
+*.lo
+*.cc
+*.hh
+ui_*
+moc_*
+src/dissolve-mpi
+src/dissolve-gui
+src/dissolve
+*.kdev4
+build/
+cmake-build-*/
+*.exe
+
+# Miscellaneous
+*swp
+changes
+
+# Example files
+*.beat
+*.restart
+*.restart.prev
+*.state

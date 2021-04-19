@@ -1,0 +1,18 @@
+add_subdirectory(base)
+add_subdirectory(classes)
+add_subdirectory(data)
+add_subdirectory(expression)
+add_subdirectory(genericitems)
+add_subdirectory(keywords)
+add_subdirectory(io)
+add_subdirectory(main)
+add_subdirectory(math)
+add_subdirectory(module)
+add_subdirectory(procedure)
+add_subdirectory(neta)
+
+if(GUI)
+  add_subdirectory(gui)
+endif(GUI)
+
+add_subdirectory(modules)

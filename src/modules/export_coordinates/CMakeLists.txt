@@ -1,0 +1,1 @@
+dissolve_add_module(exportcoords.h exportcoordinates)

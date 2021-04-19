@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Team Dissolve and contributors
+
+#pragma once
+
+#include <QTabBar>
+
+// Forward declarations
+/* none */
+
+// Main Tabs Bar
+class MainTabsBar : public QTabBar
+{
+    Q_OBJECT
+
+    public:
+    MainTabsBar(QWidget *parent);
+};

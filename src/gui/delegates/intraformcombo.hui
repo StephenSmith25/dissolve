@@ -1,0 +1,37 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Team Dissolve and contributors
+
+#pragma once
+
+#include "classes/masterintra.h"
+#include <QComboBox>
+#include <QModelIndex>
+#include <QObject>
+#include <QtWidgets/QItemDelegate>
+
+// Forward Declarations
+class ComboListItems;
+
+// Delegate class, providing list of functional forms / master terms for an intramolecular definition
+class IntraFormComboDelegate : public QItemDelegate
+{
+    Q_OBJECT
+
+    private:
+    // Associated item list
+    ComboListItems *items_;
+    // List of master terms
+    const std::list<MasterIntra> &masterTerms_;
+
+    public:
+    IntraFormComboDelegate(QObject *parent, ComboListItems *items, const std::list<MasterIntra> &masterTerms);
+    virtual ~IntraFormComboDelegate();
+    // Reimplemented virtual function to create editing widget
+    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    // Set the data to appear when the editor is called
+    void setEditorData(QWidget *editor, const QModelIndex &index) const;
+    // Extract data from editor, and place back into source model
+    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const;
+    // Resize editor
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+};
