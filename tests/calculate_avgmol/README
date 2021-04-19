@@ -1,5 +1,0 @@
-Average Molecule Calculation System Test
-Test CalculateAvgMol module functionality against dlputils output.
-
-System comprises 267 SPC/FW molecules, read from an xyz trajectory.
-
