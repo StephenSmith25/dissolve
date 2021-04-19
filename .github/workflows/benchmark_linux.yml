@@ -26,12 +26,12 @@ jobs:
             cmake -G "Ninja" -DBUILD_BENCHMARKS:bool=true -DBUILD_ANTLR_RUNTIME:bool=true ${{ parameters.extraflags }} ../
             ninja
         - name: Run benchmark
-            run: ./bin/benchmarks --benchmark_format=json | tee benchmark_result.json
+          run: ./bin/benchmarks --benchmark_format=json | tee benchmark_result.json
         - name: Store benchmark result
-            uses: rhysd/github-action-benchmark@v1
-            with:
-                tool: 'googlecpp'
-                output-file-path: benchmark_result.json
-                # Use personal access token instead of GITHUB_TOKEN due to https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/td-p/26869/highlight/false
-                github-token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-                auto-push: true
+          uses: rhysd/github-action-benchmark@v1
+          with:
+              tool: 'googlecpp'
+              output-file-path: benchmark_result.json
+              # Use personal access token instead of GITHUB_TOKEN due to https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/td-p/26869/highlight/false
+              github-token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+              auto-push: true
