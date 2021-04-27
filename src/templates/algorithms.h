@@ -174,6 +174,8 @@ template <typename... Args> class zip
 
 namespace dissolve
 {
+// Transform reduce algorithms
+// unaryOp transform container element into type T, which is reduced (summed) by the binaryOp
 // Base tranform_reduce, no parallel policy
 template <class Iter, typename T, class UnaryOp, class BinaryOp>
 T transform_reduce(Iter begin, Iter end, T initialVal, BinaryOp binaryOp, UnaryOp unaryOp)
@@ -192,8 +194,7 @@ T transform_reduce(ParallelPolicy policy, Iter begin, Iter end, T initialVal, Bi
 // parallel policy
 template <typename ParallelPolicy, class Iter, typename T, class UnaryOp, class BinaryOp,
           std::enable_if_t<std::is_same_v<ParallelPolicy, FakeParallelPolicy>, bool> = true>
-T transform_reduce([[maybe_unused]] ParallelPolicy policy, Iter begin, Iter end, T initialVal, BinaryOp binaryOp,
-                   UnaryOp unaryOp)
+T transform_reduce(ParallelPolicy, Iter begin, Iter end, T initialVal, BinaryOp binaryOp, UnaryOp unaryOp)
 {
     return dissolve::transform_reduce(begin, end, initialVal, binaryOp, unaryOp);
 }
